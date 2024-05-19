@@ -1,0 +1,57 @@
+/* Navbar styling */
+.navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.navbar .navbar-brand:hover {
+    color: #0056b3;
+}
+
+.navbar .nav-link {
+    color: #007bff;
+}
+
+.navbar .nav-link:hover {
+    color: #0056b3;
+}
+
+.navbar .nav-item .nav-link {
+    margin-right: 15px;
+}
+
+.navbar .nav-item .nav-link:last-child {
+    margin-right: 0;
+}
+
+/* Product index table styling */
+.table {
+    margin-top: 20px;
+}
+
+.table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.table thead th {
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table tbody td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table .btn {
+    margin: 0 5px;
+}
