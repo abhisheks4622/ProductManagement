@@ -23,13 +23,15 @@ class AuthController extends Controller
             'password' => 'required|string|min:8|confirmed',
         ]);
 
-        User::create([
+        $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('login.form');
+        Auth::login($user);
+
+        return redirect()->route('products.index');
     }
 
     public function showLoginForm()
@@ -43,7 +45,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('dashboard');
+            return redirect()->route('products.index');
         }
 
         return back()->withErrors([
